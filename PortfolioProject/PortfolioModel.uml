@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_PGPuQLdkEfCuKK8XAuZwaQ" name="PortfolioRoot">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_PIctsLdkEfCuKK8XAuZwaQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_XRFBsLdkEfCuKK8XAuZwaQ" name="Asset">
+    <packagedElement xmi:type="uml:Class" xmi:id="_kHqSkLdkEfCuKK8XAuZwaQ" name="FinancialAsset" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qViUoLdlEfCuKK8XAuZwaQ" name="currentPrice">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-eV7ULd4EfCuKK8XAuZwaQ" name="identifier">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yz6YsLdxEfCuKK8XAuZwaQ" name="volatility">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0_eAYLdoEfCuKK8XAuZwaQ" name="Stock">
+      <packagedElement xmi:type="uml:Class" xmi:id="_85B6cLdkEfCuKK8XAuZwaQ" name="PreferredStock">
+        <generalization xmi:type="uml:Generalization" xmi:id="_7zH68LdnEfCuKK8XAuZwaQ" general="_kHqSkLdkEfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bbL4YLdpEfCuKK8XAuZwaQ" name="issuer">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Xq6LELdxEfCuKK8XAuZwaQ" name="dividend">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_2-TEkLdoEfCuKK8XAuZwaQ" name="Bond">
+      <packagedElement xmi:type="uml:Class" xmi:id="_-eBiULdkEfCuKK8XAuZwaQ" name="Bond">
+        <generalization xmi:type="uml:Generalization" xmi:id="_8fjjILdnEfCuKK8XAuZwaQ" general="_kHqSkLdkEfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CQbgILdpEfCuKK8XAuZwaQ" name="marketReferenceRate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_X7l18LdyEfCuKK8XAuZwaQ" name="quotedMargin">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_q2VBoLdyEfCuKK8XAuZwaQ" name="issuer">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DZDwkLdzEfCuKK8XAuZwaQ" name="duration">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6--1ULd0EfCuKK8XAuZwaQ" name="maturity" type="_WKMKwLdnEfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-69isLd0EfCuKK8XAuZwaQ" name="faceValue">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Go1NULd1EfCuKK8XAuZwaQ" name="currency" type="_JjnjcLd1EfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TYZawLd2EfCuKK8XAuZwaQ" name="couponRate">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wuOsULd2EfCuKK8XAuZwaQ" name="couponFrequency">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5xAcwLdoEfCuKK8XAuZwaQ" name="Derivative">
+      <packagedElement xmi:type="uml:Class" xmi:id="_7bx5ULdkEfCuKK8XAuZwaQ" name="Derivative">
+        <generalization xmi:type="uml:Generalization" xmi:id="_7Ox3wLdnEfCuKK8XAuZwaQ" general="_kHqSkLdkEfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ysIhQLdnEfCuKK8XAuZwaQ" name="underlying" type="_kHqSkLdkEfCuKK8XAuZwaQ" association="_yr87ELdnEfCuKK8XAuZwaQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ysJIUbdnEfCuKK8XAuZwaQ" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lFdawLdoEfCuKK8XAuZwaQ" name="type" type="_nj_5wLdoEfCuKK8XAuZwaQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Du1aALd4EfCuKK8XAuZwaQ" name="strikePrice">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HibAYLd4EfCuKK8XAuZwaQ" name="maturity" type="_WKMKwLdnEfCuKK8XAuZwaQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_yr87ELdnEfCuKK8XAuZwaQ" name="underlyingAsset" memberEnd="_ysIhQLdnEfCuKK8XAuZwaQ _ysJIUrdnEfCuKK8XAuZwaQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ysGsELdnEfCuKK8XAuZwaQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ysHTILdnEfCuKK8XAuZwaQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ysJIUrdnEfCuKK8XAuZwaQ" name="derivative" type="_7bx5ULdkEfCuKK8XAuZwaQ" association="_yr87ELdnEfCuKK8XAuZwaQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1LW8wLdnEfCuKK8XAuZwaQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4wK3kLd4EfCuKK8XAuZwaQ" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_vux1ULfVEfCOBf21n9bu0w" name="HistoricalDataType">
+      <packagedElement xmi:type="uml:Association" xmi:id="_UFxE0Ld7EfCuKK8XAuZwaQ" name="pastFinancialData" memberEnd="_UFzhErd7EfCuKK8XAuZwaQ _UF1WQLd7EfCuKK8XAuZwaQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UFzhELd7EfCuKK8XAuZwaQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UFzhEbd7EfCuKK8XAuZwaQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UFzhErd7EfCuKK8XAuZwaQ" name="financialasset" type="_kHqSkLdkEfCuKK8XAuZwaQ" association="_UFxE0Ld7EfCuKK8XAuZwaQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UF1WQLd7EfCuKK8XAuZwaQ" name="historicaldata" type="_SPriYLd6EfCuKK8XAuZwaQ" association="_UFxE0Ld7EfCuKK8XAuZwaQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aGlXwLd7EfCuKK8XAuZwaQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aHTwgLd7EfCuKK8XAuZwaQ" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9s-jELdoEfCuKK8XAuZwaQ" name="DataTypes">
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_nj_5wLdoEfCuKK8XAuZwaQ" name="DerivativeType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rLp88LdoEfCuKK8XAuZwaQ" name="FUTURE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_skQHkLdoEfCuKK8XAuZwaQ" name="FORWARD"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tgefQLdoEfCuKK8XAuZwaQ" name="AMERICANCALL"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uIBncLdoEfCuKK8XAuZwaQ" name="AMERICANPUT"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_WKMKwLdnEfCuKK8XAuZwaQ" name="Date"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_JjnjcLd1EfCuKK8XAuZwaQ" name="Currency">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MGIjgLd1EfCuKK8XAuZwaQ" name="USD"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_NV3tELd1EfCuKK8XAuZwaQ" name="EUR"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Nvo38Ld1EfCuKK8XAuZwaQ" name="YEN"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OQrIcLd1EfCuKK8XAuZwaQ" name="GBP"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_da-rQLd8EfCuKK8XAuZwaQ" name="HistoricalDataTypeFinancialAsset">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gB8tgLd8EfCuKK8XAuZwaQ" name="PRICE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hzSIQLd8EfCuKK8XAuZwaQ" name="VOLATILITY"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_kPtHYLd8EfCuKK8XAuZwaQ" name="COUPON"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_mGaKULd8EfCuKK8XAuZwaQ" name="DIVIDEND"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_4a6-sLfYEfCOBf21n9bu0w" name="Government">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_D66QELfZEfCOBf21n9bu0w" name="FRANCE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UKgrMLfZEfCOBf21n9bu0w" name="ECB"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_U4Fi4LfZEfCOBf21n9bu0w" name="USA"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ZshiQLfZEfCOBf21n9bu0w" name="UK"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_mL6-ALfgEfCOBf21n9bu0w" name="InstitutionRateCalculator">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_p5FMQLfgEfCOBf21n9bu0w" name="EURIBOR"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_qfaQoLfZEfCOBf21n9bu0w" name="TimeInterval">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vDuJULfZEfCOBf21n9bu0w" name="7D"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vzDUgLfZEfCOBf21n9bu0w" name="1M"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_wX6VELfZEfCOBf21n9bu0w" name="3M"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_aIG_ILfmEfCOBf21n9bu0w" name="HistoricalDataTypeRate">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_dGc_kLfmEfCOBf21n9bu0w" name="RATE"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_dnLuELfmEfCOBf21n9bu0w" name="VOLATILITY"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_YDQSQLd0EfCuKK8XAuZwaQ" name="Rate">
+    <packagedElement xmi:type="uml:Class" xmi:id="_YrPWULfXEfCOBf21n9bu0w" name="Rate" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Gi1CoLfbEfCOBf21n9bu0w" name="volatility[]">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gOfdoLfdEfCOBf21n9bu0w" name="rate[]">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_U7zzALfeEfCOBf21n9bu0w" name="maturity[]" type="_qfaQoLfZEfCOBf21n9bu0w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-G23sLfhEfCOBf21n9bu0w" name="identifier">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TSzGcLfhEfCOBf21n9bu0w" name="Government">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_bwPz4LfhEfCOBf21n9bu0w" annotatedElement="_bJgIgLfXEfCOBf21n9bu0w">
+        <body>TimeInterval for inflation is a lookback interval</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jiDLALfbEfCOBf21n9bu0w" name="GovernmentRelated" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_rx3sILfbEfCOBf21n9bu0w" general="_YrPWULfXEfCOBf21n9bu0w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_blvw4LfdEfCOBf21n9bu0w" name="government" type="_4a6-sLfYEfCOBf21n9bu0w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bJgIgLfXEfCOBf21n9bu0w" name="Inflation">
+        <generalization xmi:type="uml:Generalization" xmi:id="_p52akLfbEfCOBf21n9bu0w" general="_jiDLALfbEfCOBf21n9bu0w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ixo_YLfiEfCOBf21n9bu0w" name="instance" isStatic="true" type="_bJgIgLfXEfCOBf21n9bu0w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xOozoLfXEfCOBf21n9bu0w" name="SovereignYield">
+        <generalization xmi:type="uml:Generalization" xmi:id="_pdywsLfbEfCOBf21n9bu0w" general="_jiDLALfbEfCOBf21n9bu0w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C_5DMLfiEfCOBf21n9bu0w" name="instance" isStatic="true" type="_xOozoLfXEfCOBf21n9bu0w"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XmuZwLfhEfCOBf21n9bu0w" name="Institution">
+      <packagedElement xmi:type="uml:Class" xmi:id="_sFujoLfYEfCOBf21n9bu0w" name="InstitutionOfferedRate">
+        <generalization xmi:type="uml:Generalization" xmi:id="_IKwbALfhEfCOBf21n9bu0w" general="_tCLrMLfgEfCOBf21n9bu0w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LU-e0LfiEfCOBf21n9bu0w" name="instance" isStatic="true" type="_sFujoLfYEfCOBf21n9bu0w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_tCLrMLfgEfCOBf21n9bu0w" name="InstitutionRelated" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ujhiILfgEfCOBf21n9bu0w" general="_YrPWULfXEfCOBf21n9bu0w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zg9FcLfgEfCOBf21n9bu0w" name="institution" type="_mL6-ALfgEfCOBf21n9bu0w"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_tPWdILfjEfCOBf21n9bu0w" name="Historical">
+    <packagedElement xmi:type="uml:Class" xmi:id="_SPriYLd6EfCuKK8XAuZwaQ" name="HistoricalDataFinancialAsset">
+      <generalization xmi:type="uml:Generalization" xmi:id="_vghHILfmEfCOBf21n9bu0w" general="_qgmicLfkEfCOBf21n9bu0w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4XWdALd6EfCuKK8XAuZwaQ" name="dataType" type="_da-rQLd8EfCuKK8XAuZwaQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qgmicLfkEfCOBf21n9bu0w" name="HistoricalData" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rpSo0LfkEfCOBf21n9bu0w" name="timestamp" type="_WKMKwLdnEfCuKK8XAuZwaQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sG9cQLfkEfCOBf21n9bu0w" name="value">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y78hoLflEfCOBf21n9bu0w" name="HistoricalDataRate">
+      <generalization xmi:type="uml:Generalization" xmi:id="_wMkU0LfmEfCOBf21n9bu0w" general="_qgmicLfkEfCOBf21n9bu0w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6uZKQLflEfCOBf21n9bu0w" name="maturity" type="_qfaQoLfZEfCOBf21n9bu0w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pK8sMLfmEfCOBf21n9bu0w" name="dataType" type="_aIG_ILfmEfCOBf21n9bu0w"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
